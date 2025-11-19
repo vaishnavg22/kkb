@@ -1,0 +1,35 @@
+login butbucket
+create new repository
+setting 
+personal bitbucket setting
+app password
+create app password
+label:
+tick all option
+create 
+copy the password
+
+open terminal in folder
+bitbucket project
+select project
+my project
+clone
+copy link (token)
+past url in terminal
+pass token
+
+
+cd myproject
+touch index.html
+git add index.html
+git status
+git commit -m "v"
+push origin main
+git branch name (home)
+git checkout home
+touch style.css
+git add style.css
+git status
+git cummit -m "v6"
+git status
+pull request merge

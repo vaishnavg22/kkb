@@ -1,0 +1,33 @@
+git lab
+new project(blank proj )public-create)
+code http link
+git clone link
+access token add new token give name to token
+sellect all ticks
+create token 
+terminal
+git clone token
+cd project name
+touch index.html
+git add index.html
+git status
+git commit -m "v"
+git branch fe
+git checkout fe
+git status
+touch style.css
+git add style.css
+git commit -m "febranch"
+git push origin fe
+username 
+password -token
+
+touch style.css
+git add style.css
+git status
+git commit -m "css"
+git push origin home
+username 
+password -token
+create merge request
+git checkout main

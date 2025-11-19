@@ -1,0 +1,30 @@
+1,2,
+git config --global user.name "vaishnav"
+git config --global user.email ""
+git config --list
+git init
+git clone (code link)
+git status
+touch index.html
+git add index.html
+git status
+git commit -m "v"
+git branch fe
+git checkout fe
+git status
+touch style.css
+git add style.css
+git commit -m "febranch"
+git push origin fe
+username 
+password -token
+(open git setting
+developer setting
+personal acc tocken
+token classic
+gen token)
+compare&request
+create pull request
+git checkout master
+git pull origin master
+

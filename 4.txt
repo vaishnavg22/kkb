@@ -1,0 +1,44 @@
+jenkin
+sudo systemctl status jenkins
+sudo systemctl start jenkins
+sudo systemctl restart jenkins
+
+open computer/var/www/html/create folder&open terminal
+cmd:sudo mkdir jenkins(folder name)
+pass:acs...
+
+twrminal
+ngrok http 8080
+sign in
+username-kkwgh
+pass pc pass
+
+open link and copy token 
+past link and open localhost 8080
+login acc
+
+jenkin 
+new item /name
+free style & ok
+source code management
+past url in repository
+*/branch select
+apply and save
+open github setting
+webhooks
+add webhook
+payload urlcopy cmd
+url:http ngrok.fre.com/github-webhooks/
+
+ssl verification enable
+content type/application json
+send me everything
+add webhook
+open jinking&build now
+check workspace
+configure
+build step/Execute shell
+
+cmd: cp r*/var/www/html/project name
+cmd:open terminal
+sudo chown -R jenkins/var/www/html/project name
