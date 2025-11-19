@@ -1,4 +1,4 @@
-1,2,
+git hub
 git config --global user.name "vaishnav"
 git config --global user.email ""
 git config --list
@@ -27,4 +27,5 @@ compare&request
 create pull request
 git checkout master
 git pull origin master
+
 
