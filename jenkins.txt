@@ -1,0 +1,31 @@
+#Step 0 : install ngrok and forward url
+ngrok http 8080 —-use forwarding url for open Jenkins .
+#Step 1 install
+Install jenkins and jdk
+curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
+/usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+https://pkg.jenkins.io/debian binary/ | sudo tee \
+/etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt update
+sudo apt install jenkins -y
+#Step 2 :
+Start and Enable Jenkins Service
+sudo systemctl start jenkins
+sudo systemctl enable jenkins
+Check status:
+sudo systemctl status jenkins
+If everything is fine, it should show active (running).
+#Step 3:
+Access Jenkins Web Interface
+for local machine:
+Use Forwarding URL from NGROK
+Get the Initial Admin Password
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+User name : kkwagh
+Password : acs@02
+#Jenkins Project Setup
+Create project —---> Free Style —---> Source Code Management—----> select git —----> add repo url —-> select branch —--> Triggers —-> tik GitHub hook trigger for GITScm polling—---->apply and save.
+#Git hub setups
+Open Project —--> go to settings —-> left side option webhook —>
+Add webhook —----> in webhook enter payload URL —-- content type —-> JSON —-- > send me everything —-> add webhook
