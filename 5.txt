@@ -1,0 +1,41 @@
+mvn -version
+sudo apt update
+sudo apt install maven
+mvn archetype:generate -DgroupId=com.example \
+    -DartifactId=MyApp \
+    -DinteractiveMode=false
+
+cd MyApp
+
+add code properties pom.xml
+<properties>
+<maven.compiler.source>8</maven.compiler.source>
+<maven.compiler.target>8</maven.compiler.target>
+</properties>
+
+pom.xml
+<build>
+<plugins>
+<plugin>
+<groupID>org.codehaus.majo</groupID>
+<artifactID>exce-maven-plugin</artifactID>
+<version>3.0.0</version>
+<executions>
+<exicution>
+<goals>
+<goal>java</goal>
+</goals>
+</exicution>
+</executions>
+</configuration>
+<main class>com.example.App</main class>
+</configuration>
+</plugin>
+<plugins>
+</build>
+</project>
+
+mvn compile
+mvn exec:java
+mvn package
+java -jar target/myapp-1.0-SNAPSHOT=-jar
