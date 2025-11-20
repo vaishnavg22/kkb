@@ -39,6 +39,7 @@ check workspace
 configure
 build step/Execute shell
 
-cmd: cp r*/var/www/html/project name
+cmd: cp -r*/var/www/html/project name
 cmd:open terminal
 sudo chown -R jenkins/var/www/html/project name
+
