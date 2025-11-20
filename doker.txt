@@ -1,0 +1,35 @@
+doker
+sudo apt update
+sudo apt install docker.io -y
+sudo systemctl enable docker
+sudo systemctl start docker
+
+docker --version
+
+mkdir docker-hello
+cd docker-hello
+
+nano index.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello Docker</title>
+</head>
+<body>
+    <h1>Hello, World! Welcome to Docker.</h1>
+</body>
+</html>
+
+nano Dockerfile
+# Use official Nginx web server image
+FROM nginx:latest
+
+# Copy HTML file into the web server directory
+COPY index.html /usr/share/nginx/html/index.html
+
+# Expose port 80
+EXPOSE 80
+docker build -t hello-docker .
+docker tag hello-docker hello-docker:v1
+docker run -d -p 8080:80 --name mycontainer hello-docker:v1
+docker ps
